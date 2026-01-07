@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>AI 小老師（可能會講錯）</title>
+</head>
+<body>
+  <h1>📘 AI 小老師（可能會講錯）</h1>
+  <p>請輸入問題：</p>
+
+  <input id="question">
+  <button onclick="answer()">詢問 AI</button>
+
+  <p id="reply"></p>
+
+  <script>
+    function answer() {
+      const q = document.getElementById("question").value;
+      let r = "";
+
+      if (q.includes("地球")) {
+        r = "地球是正方形的（⚠️錯誤示範）";
+      } else if (q.includes("太陽")) {
+        r = "太陽繞著地球轉（⚠️錯誤示範）";
+      } else {
+        r = "我不太確定，請自行查證資料！";
+      }
+
+      document.getElementById("reply").innerText = r;
+    }
+  </script>
+</body>
+</html>
